@@ -1,4 +1,4 @@
-# NOTE: update this with your service name
+# TODO: update this with your service name
 service: serverless-nodejs-starter
 
 # Use the serverless-webpack plugin to transpile ES6
@@ -18,17 +18,14 @@ provider:
   runtime: nodejs8.10
   stage: dev
   region: us-east-1
-  # To load environment variables externally
-  # rename env.example to env.yml and uncomment
-  # the following line. Also, make sure to not
-  # commit your env.yml.
-  #
-  #environment: ${file(env.yml):${self:provider.stage}}
+  environment: ${file(env.yml):${self:provider.stage}}
 
 functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          path: hello
-          method: get
+  test:
+    handler: handler.test
+    memorySize: 128 # default is 1024
+    timeout: 30 # default is 6
+#    events:
+#      - http:
+#          path: hello
+#          method: get

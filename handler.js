@@ -1,4 +1,7 @@
-export const hello = async (event, context, callback) => {
+import message from './src/message';
+
+
+export async function test(event, context, callback) {
   const response = {
     statusCode: 200,
     body: JSON.stringify({
@@ -7,10 +10,4 @@ export const hello = async (event, context, callback) => {
   };
 
   callback(null, response);
-};
-
-const message = ({ time, ...rest }) => new Promise((resolve, reject) => 
-  setTimeout(() => {
-    resolve(`${rest.copy} (with a delay)`);
-  }, time * 1000)
-);
+}
