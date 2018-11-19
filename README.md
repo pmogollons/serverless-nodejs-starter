@@ -56,7 +56,7 @@ const message = ({ time, ...rest }) => new Promise((resolve, reject) =>
 To create a new Serverless project.
 
 ``` bash
-$ serverless install --url https://github.com/AnomalyInnovations/serverless-nodejs-starter --name my-project
+$ serverless install --url https://github.com/pmogollons/serverless-nodejs-starter --name project
 ```
 
 Enter the new directory
